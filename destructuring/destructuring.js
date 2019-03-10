@@ -10,12 +10,18 @@ function bar() {
     };
 }
 
-let [a,b,c]=foo(),
+let [a,b,c]=foo();
     // {x:x, y:y, z:z}=bar();
-    {x,y,z}=bar();//более короткая запись
+    // {x,y,z}=bar();//более короткая запись
 console.log(a, b, c);
-console.log(x, y, z);
+// console.log(x, y, z);
 
 // Запись x: bam означает, что свойство x является исходным значением, а bam — целевой переменной, которой оно присваивается.
 let {x: bam, y:baz, z:bap} =bar();
 console.log(bam, baz, bap);
+
+
+// При деструктурирующем присваивании объектов имассивов вовсе не обязательно присваивать все имеющиеся значения
+let [,something]=foo(),
+    {x,z}=bar();
+console.log(something,x,z);
