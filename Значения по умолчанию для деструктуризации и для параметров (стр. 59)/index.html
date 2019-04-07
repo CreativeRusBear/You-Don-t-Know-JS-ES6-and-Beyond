@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Значения по умолчанию для деструктуризации и для параметров</title>
+</head>
+<body>
+<script>
+    function f6({x=10}={}, {y}={y: 10}) {
+        console.info(x,y);
+    }
+
+    f6()// 10 10
+    f6({x: 5}, undefined); //5 10
+    f6(5, 10);//10 undefined
+    f6({x:5},{y: 7});// 5 7
+</script>
+</body>
+</html>
