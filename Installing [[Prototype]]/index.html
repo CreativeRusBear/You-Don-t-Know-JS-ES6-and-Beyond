@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Protoype</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let o1 ={
+			a: 1
+		},
+		o2={};
+		// Для задания [[Prototype]] существующего объекта в ES6 применяется метод Object.setPrototypeOf(..)
+		Object.setPrototypeOf(o2,o1);
+		console.log(o2);
+	</script>
+</body>
+</html>
