@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вложенные значения по умолчанию: деструктурированные и реструктурированные</title>
+</head>
+<body>
+<script>
+    let defaults = {
+        options: {
+            remove: true,
+            enable: false,
+            instance: {}
+        },
+        log:{
+            warn: true,
+            error: true
+        }
+    };
+    let config = {
+        options: {
+            remove: false,
+            instance: null
+        }
+    };
+
+
+    // сливаем 'defaults' в 'config'
+    {
+        // деструктуризация (с присваиваниями значений по умолчанию)
+        let {
+            options: {
+                remove = defaults.options.remove,
+                enable = defaults.options.enable,
+                instance = defaults.options.instance
+            }={},
+            log : {
+                warn = defaults.log.warn,
+                error = defaults.log.error
+            }={}
+        } = config;
+
+        // реструктуризация
+        config = {
+            options: {remove, enable, instance},
+            log: {warn, error}
+        };
+    }
+
+    console.log(config);
+</script>
+</body>
+</html>
