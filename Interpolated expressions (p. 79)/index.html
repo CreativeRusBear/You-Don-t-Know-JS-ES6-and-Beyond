@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function upper (string){
+			return string.toUpperCase();
+		}
+
+		let somethingString = "reader",
+			text = `A very ${upper( 'warm' )} welcome to all of you ${upper( `${somethingString}s` )}!`;
+		console.log(text);
+	</script>
+</body>
+</html>
