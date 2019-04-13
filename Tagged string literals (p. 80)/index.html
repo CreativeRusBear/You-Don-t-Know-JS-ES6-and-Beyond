@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tagged string literals</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//first example
+		function foo (strings, ...values){
+			console.log(strings);
+			console.log(values);
+		}
+		let desc="awesome";
+		foo`Everything is ${desc}!`;
+
+		//second example
+		function bar(){
+			return function rFun(strings, ...values){
+				console.log(strings);
+				console.log(values);
+			}
+		}
+
+		bar()`Everything is ${desc}!`;
+
+		//third example
+		function showraw(strings, ...values) {
+ 			console.log( strings );
+			console.log( strings.raw );
+		}
+		showraw`Hello\nWorld`;
+
+
+		//work with String.raw() method
+		console.log(String.raw`Hello\nWorld`.length);
+	</script>
+</body>
+</html>
