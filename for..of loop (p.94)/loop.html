@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for..of and for..in loops</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let arr=['a','b','c','d','e'];
+		//log indexe of val
+		for(let val in arr) console.log(val);
+		
+		//log value of val
+		for(let val of arr) console.log(val);
+
+		for(let abc of "Hello") console.log(abc);
+
+		let o={};
+		for(o.a of [1,2,3]) console.log(o);
+
+
+
+	</script>	
+</body>
+</html>
