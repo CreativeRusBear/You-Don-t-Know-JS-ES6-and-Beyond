@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const INSTANCE= Symbol("instance");
+
+		function HappyFace() {
+			if (HappyFace[INSTANCE]) {
+				return HappyFace[INSTANCE];
+			}
+			function smile(){
+				console.log('Smile');
+			}
+			return HappyFace[INSTANCE]={
+				smile: smile
+			};
+		}
+
+		let me  = HappyFace(),
+			you = HappyFace();
+		console.log(me===you);
+	</script>
+</body>
+</html>
