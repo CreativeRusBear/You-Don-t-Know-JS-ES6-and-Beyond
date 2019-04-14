@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Numeric extensions literals</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let dec=42,
+			oct = 0o52,
+			hex = 0x2a,
+			bin = 0b101010;
+//преобразование в десятичную систему счисления
+			console.log(`${Number(dec)}
+${Number(oct)}
+${Number(hex)} 
+${Number(bin)}`)
+
+//обратное преобразование
+console.log(dec.toString(10));//в десятичную
+console.log(dec.toString(8));//в восьмиричную
+console.log(dec.toString(16));//в шестнадцатиричную
+console.log(dec.toString(2));//в двоичную
+	</script>
+</body>
+</html>
