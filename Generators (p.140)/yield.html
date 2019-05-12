@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function *foo() {
+        while (true){
+            yield console.log(Math.random());
+        }
+    }
+    let a=foo();
+    a.next();
+</script>
+</body>
+</html>
